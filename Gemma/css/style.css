@@ -179,7 +179,7 @@ body {
   }
 }
 
-.carousel {
+.container.reference {
   overflow: hidden;
   width: 100vw;
   height: auto;
@@ -187,42 +187,33 @@ body {
   margin-right: auto;
   text-align: center;
   color: #0b0b0b;
-  vertical-align: middle;
 }
 
-.carousel .panes {
+.container.reference .panes {
   list-style: none;
   position: relative;
   width: 200%;
   /* Number of panes * 100% */
   overflow: hidden;
-  /* This is used solely to clear floats, it does not add functionality. */
   -moz-animation: carousel 60s infinite;
   -webkit-animation: carousel 60s infinite;
   animation: carousel 30s infinite;
   padding: 0px;
-  vertical-align: middle;
 }
 
-.carousel .panes li {
+.container.reference li {
   position: relative;
   float: left;
   width: 50%;
-  vertical-align: middle;
 }
 
-.carousel .content {
+.container.reference .content {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  vertical-align: middle;
 }
 
-.carousel .content h2 {
-  vertical-align: middle;
-}
-
-.carousel .pink {
+.container.reference .pink {
   color: #ff00ff;
   font-size: 40px;
   line-height: 25px;

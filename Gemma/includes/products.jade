@@ -1,0 +1,45 @@
+#products
+mixin prod(name, desc, price)
+  .product
+    .prodname
+      h1= name
+    .desciption
+      h2= desc
+    .price
+      h1= price
+        
+
+.container.products
+  .maintitle
+    h1 Services
+  .title
+    h1 Massage
+  +prod("Back Massage", "Simple but pure bliss, get rid of all the days stress with a wonderful back massage", "£15")
+  +prod("Full Body Swedish", "Desciption", "£30")
+  +prod("Full Body Deep Tissue", "Desciption", "£35")
+  +prod("Inidan Head Massage", "Desciption", "£25")
+  .title
+    h1 Facials
+  +prod("Miniature Facial", "Desciption", "£12")
+  +prod("1 Hour Special", "Desciption", "£20")
+  .title
+    h1 Tinting
+  +prod("Eyelast Tint", "Desciption", "£10")
+  +prod("Brow Tint", "Desciption", "£5")
+  +prod("eyelash & Brow", "Desciption", "£12")
+  .title
+    h1 Waxing
+  +prod("Half Leg Wax", "Desciption", "£10")
+  +prod("Full Leg Wax", "Desciption", "£12")
+  +prod("Lip & Chin Wax", "Desciption", "£5")
+  +prod("Eyebrow Wax", "Desciption", "£5")
+  +prod("Underarm Wax", "Desciption", "£7")
+  +prod("Bikini Wax", "Desciption", "£7")
+  .title
+    h1 Nails
+  +prod("manicure", "Desciption", "£15")
+  +prod("Pedicure", "Desciption", "£20")
+  +prod("Pedicure with Gel Polish", "Desciption", "£25")
+  +prod("Removal", "Desciption", "£5")
+  
+  

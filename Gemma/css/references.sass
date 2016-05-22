@@ -1,0 +1,56 @@
+.carousel
+  overflow:hidden
+  width:100vw
+  height:auto
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+  color: $secondary
+  vertical-align: middle
+
+  .panes
+      list-style:none
+      position:relative
+      width:200%; /* Number of panes * 100% */
+      overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+      -moz-animation:carousel 60s infinite
+      -webkit-animation:carousel 60s infinite
+      animation:carousel 30s infinite
+      padding: 0px
+      vertical-align: middle
+
+  .panes li
+      position: relative
+      float:left
+      width:50%
+      vertical-align: middle
+
+  .content
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+    vertical-align: middle
+    h2
+      vertical-align: middle
+
+  .pink
+    color: $accent
+    font-size: 40px
+    line-height: 25px
+
+@keyframes carousel
+  0%    { left:0; }
+  25%   { left:0; }
+  49%  { left:0%; }
+  50%  { left:-100%; }
+  75%   { left:-100%; }
+  99%   { left:-100%; }
+  100%  { left:-0%; }
+
+
+
+@media (max-width: 900px)
+  .carousel
+    .content
+      width: 90%
+      font-size: 10px

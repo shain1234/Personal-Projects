@@ -1,0 +1,158 @@
+.container.home
+  height: 100vh
+  background:
+    image: url("../images/bg.png")
+    size: cover
+    repeat: none
+    position: center
+    margin: none
+
+  h1
+    margin: 0px
+    padding-top: 10px
+    padding-left: 10px
+
+  .nav
+    position: fixed
+    top: 5px
+    right: 10px
+    font-size: 18px
+
+    ul
+      margin-top: 0px
+
+      a
+        text-decoration: none
+        font-size: 25px
+        color: $primary
+        padding: 5px
+        line-height: 45px
+        transition: 0.5s ease
+        -webkit-text-stroke-width: 1px
+        -webkit-text-stroke-color: $primary
+      a:hover
+        color: $accent
+        border-bottom: 3px solid
+      a:active
+        color: $accent
+        border-bottom: 3px solid
+      li
+        display: inline-block
+
+  .pink
+    color: $accent
+
+  .subtext
+    width: 50vw
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    margin-top: 50vh
+    font-size: 28px
+    h2
+      margin-bottom: 0px
+    h5
+      font-size: 18px
+      color: #999
+      margin-top: 0px
+
+
+//  .carousel
+    overflow:hidden
+    width:300px
+    height: 500px
+    margin-top: 55vh
+    margin-left: auto
+    margin-right: auto
+    background:
+      color: rgba(0, 0, 0, 0.2)
+    text-align: center
+    border:
+      style: solid
+      color: $primary
+      width: 1px
+
+    .panes
+        list-style:none
+        position:relative
+        width:500%; /* Number of panes * 100% */
+        overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+        -moz-animation:carousel 60s infinite
+        -webkit-animation:carousel 60s infinite
+        animation:carousel 30s infinite
+        padding: 0px
+
+    .panes li
+        position: relative
+        float:left
+        width:20%; /* 100 / number of panes */
+        color: $primary
+
+    .carousel img
+        display:block
+        width:100%
+        max-width:100%
+
+    .carousel h2
+        bottom:10px
+        background-color:rgba(0,0,0,0.75);
+
+@keyframes carousel
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+
+
+@media (max-width: 700px)
+  .container.home
+    .nav
+      display: block
+      text-align: right
+      width: 40px
+      span
+        width: 40px
+        background-color: white
+        height: 3px
+        display: block
+        margin-bottom: 10px
+        margin-top: 5px
+
+      ul
+        display: block
+        transform: translateX(50px)
+        text-align: left
+        transition: 1s
+      ul.show
+        display: block
+        padding: 0px
+        text-align: left
+        transform: translateX(0px)
+        transition: 1s
+
+        a
+          margin-left: -60px
+        a:hover
+          color: $accent
+          border-bottom: 3px solid
+
+    .subtext
+      margin-top: 30vh
+
+    .carousel
+      width: 80vw
+      height: 50vh
+      margin-top: 60vh

@@ -1,0 +1,60 @@
+.container.products
+  background:
+    image: url("../images/prodbg.jpg")
+    size: cover
+    repeat: none
+  width: 100%
+  padding-top: 25px
+  .product
+    width: 80vw
+    margin-left: auto
+    margin-right: auto
+    border-bottom: 1px solid #333
+  .prodname
+    vertical-align: middle
+    display: inline-block
+    width: 30%
+    text-align: center
+    margin-right: 25px
+    margin-left: 2px
+  .desciption
+    display: inline-block
+    width: 50%
+    vertical-align: middle
+  .price
+    text-align: center
+    display: inline-block
+    width: 10%
+    color: $accent
+    vertical-align: middle
+  .title
+    width: auto
+    text-align: center
+    h1
+      width: auto
+      border-bottom: 1px solid $accent
+  .maintitle
+    width: auto
+    text-align: center
+    h1
+      font-size: 50px
+
+
+
+
+
+
+@media (max-width: 700px)
+  .container.products
+    font-size: 10px
+    .product
+      width: 100vw
+    h1
+      font-size: 24px
+    .price
+      width: 10%
+    .maintitle
+      width: auto
+      text-align: center
+      h1
+        font-size: 35px

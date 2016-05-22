@@ -1,0 +1,42 @@
+.container.youtube
+  background:
+    image: url(../images/youtube_bg.jpg)
+    size: cover
+  h1
+    font-size: 48px
+  p
+    margin-left: auto
+    margin-right: auto
+    width: 80vw
+    color: $secondary
+    font-size: 24px
+    text-align: center
+  .content
+    p
+      padding-bottom: 50px
+      margin-bottom: 0px
+  .title
+    h1
+      margin: 0px
+      padding: 25px
+      color: $accent
+      text-align: center
+  .video
+    height: 315px
+    width: 560px
+    margin-left: auto
+    margin-right: auto
+    box-shadow: 0px 0px 20px 0px $secondary
+    text-align: center
+    iframe
+      width: 100%
+      height: 100%
+
+@media (max-width: 700px)
+  .container.youtube
+    .video
+      width: 80%
+      height: auto
+    p
+      font-size: 18px
+      margin-top: 10px

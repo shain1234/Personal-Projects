@@ -7,19 +7,39 @@ body {
   color: #e6e5e5;
 }
 
+body h1 {
+  font-weight: lighter;
+}
+
+body h2 {
+  font-weight: lighter;
+}
+
+body a {
+  font-weight: lighter;
+}
+
 .container.home {
   height: 100vh;
-  background-image: url("../images/bg.png");
+  background-image: url("../images/bg.jpg");
   background-size: cover;
   background-repeat: none;
   background-position: center;
   background-margin: none;
 }
 
+.container.home img {
+  display: inline-block;
+  height: 20px;
+  width: auto;
+  padding-left: 5px;
+}
+
 .container.home h1 {
+  display: inline-block;
   margin: 0px;
   padding-top: 10px;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 .container.home .nav {
@@ -40,8 +60,6 @@ body {
   padding: 5px;
   line-height: 45px;
   transition: 0.5s ease;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #e6e5e5;
 }
 
 .container.home .nav ul a:hover {
@@ -67,12 +85,17 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-top: 50vh;
+  margin-top: 35vh;
   font-size: 28px;
+}
+
+.container.home .subtext img {
+  height: 50px;
 }
 
 .container.home .subtext h2 {
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .container.home .subtext h5 {
@@ -81,61 +104,20 @@ body {
   margin-top: 0px;
 }
 
-@keyframes carousel {
-  0% {
-    left: 0;
-  }
-  11% {
-    left: 0;
-  }
-  12.5% {
-    left: -100%;
-  }
-  23.5% {
-    left: -100%;
-  }
-  25% {
-    left: -200%;
-  }
-  36% {
-    left: -200%;
-  }
-  37.5% {
-    left: -300%;
-  }
-  48.5% {
-    left: -300%;
-  }
-  50% {
-    left: -400%;
-  }
-  61% {
-    left: -400%;
-  }
-  62.5% {
-    left: -300%;
-  }
-  73.5% {
-    left: -300%;
-  }
-  75% {
-    left: -200%;
-  }
-  86% {
-    left: -200%;
-  }
-  87.5% {
-    left: -100%;
-  }
-  98.5% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
+.container.home .about p {
+  text-align: center;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 28px;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .container.home {
+    height: auto;
+  }
   .container.home .nav {
     display: block;
     text-align: right;
@@ -170,23 +152,30 @@ body {
     border-bottom: 3px solid;
   }
   .container.home .subtext {
-    margin-top: 30vh;
+    margin-top: 15vh;
   }
-  .container.home .carousel {
+  .container.home .about p {
+    text-align: center;
     width: 80vw;
-    height: 50vh;
-    margin-top: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 4vw;
+    padding-top: 5vh;
   }
 }
 
 .container.reference {
   overflow: hidden;
-  width: 100vw;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   color: #0b0b0b;
+  vertical-align: bottom;
+  background-image: url(../images/gem.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100px 100px;
 }
 
 .container.reference .panes {
@@ -213,7 +202,11 @@ body {
   margin-right: auto;
 }
 
-.container.reference .pink {
+.container.reference .content h2 {
+  font-weight: bold;
+}
+
+.container.reference .content .pink {
   color: #ff00ff;
   font-size: 40px;
   line-height: 25px;
@@ -243,10 +236,12 @@ body {
   }
 }
 
-@media (max-width: 900px) {
-  .carousel .content {
+@media (max-width: 700px) {
+  .content {
     width: 90%;
-    font-size: 10px;
+  }
+  .content h2 {
+    font-size: 5vw;
   }
 }
 
@@ -256,6 +251,7 @@ body {
   background-repeat: none;
   width: 100%;
   padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .container.products .product {
@@ -267,25 +263,43 @@ body {
 
 .container.products .prodname {
   vertical-align: middle;
-  display: inline-block;
-  width: 30%;
+  width: 18%;
   text-align: center;
-  margin-right: 25px;
-  margin-left: 2px;
+  margin-right: 5px;
+  margin-left: 5px;
+  display: inline-block;
 }
 
-.container.products .desciption {
-  display: inline-block;
-  width: 50%;
+.container.products .prodname h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.container.products .description {
+  width: 60vw;
   vertical-align: middle;
+  display: inline-block;
+}
+
+.container.products .description h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 25px;
 }
 
 .container.products .price {
   text-align: center;
-  display: inline-block;
-  width: 10%;
   color: #ff00ff;
   vertical-align: middle;
+  display: inline-block;
+}
+
+.container.products .price h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
 }
 
 .container.products .title {
@@ -307,6 +321,44 @@ body {
   font-size: 50px;
 }
 
+.container.products .small {
+  text-align: center;
+}
+
+.container.products .small .prodname {
+  width: 210px;
+  text-align: center;
+}
+
+.container.products .small .prodname h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.container.products .small .description {
+  width: 0px;
+}
+
+.container.products .small .price {
+  display: inline-block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ff00ff;
+  vertical-align: middle;
+}
+
+.container.products .small .price h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.products .small span.pink {
+  color: #ff00ff;
+}
+
 @media (max-width: 700px) {
   .container.products {
     font-size: 10px;
@@ -318,7 +370,10 @@ body {
     font-size: 24px;
   }
   .container.products .price {
-    width: 10%;
+    width: 100%;
+  }
+  .container.products .price h1 {
+    font-size: 35px;
   }
   .container.products .maintitle {
     width: auto;
@@ -327,17 +382,32 @@ body {
   .container.products .maintitle h1 {
     font-size: 35px;
   }
+  .container.products .description {
+    width: 70vw;
+  }
 }
 
 .container.contact {
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .container.contact h1 {
   font-size: 50px;
-  color: #0b0b0b;
+  color: #ff00ff;
+  margin: 10px;
 }
 
 .container.contact h2 {
-  color: #0b0b0b;
+  color: #ff00ff;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.container.contact a {
+  font-size: 30px;
+  color: #ff00ff;
+  padding-bottom: 10px;
+  text-decoration: none;
 }

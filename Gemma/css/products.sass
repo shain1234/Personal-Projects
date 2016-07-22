@@ -5,6 +5,7 @@
     repeat: none
   width: 100%
   padding-top: 25px
+  padding-bottom: 25px
   .product
     width: 80vw
     margin-left: auto
@@ -12,21 +13,33 @@
     border-bottom: 1px solid #333
   .prodname
     vertical-align: middle
-    display: inline-block
-    width: 30%
+    width: 18%
     text-align: center
-    margin-right: 25px
-    margin-left: 2px
-  .desciption
+    margin-right: 5px
+    margin-left: 5px
     display: inline-block
-    width: 50%
+    h1
+      margin-top: 0px
+      margin-bottom: 0px
+  .description
+    width: 60vw
     vertical-align: middle
+    display: inline-block
+    h2
+      margin-top: 5px
+      margin-bottom: 5px
+      padding-left: 25px
   .price
     text-align: center
-    display: inline-block
-    width: 10%
     color: $accent
     vertical-align: middle
+    display: inline-block
+    h1
+      margin-top: 0px
+      margin-bottom: 0px
+      font-size: 50px
+      width: 100%
+      text-align: center
   .title
     width: auto
     text-align: center
@@ -38,11 +51,31 @@
     text-align: center
     h1
       font-size: 50px
-
-
-
-
-
+  .small
+    text-align: center
+    .product
+    .prodname
+      width: 210px
+      text-align: center
+      h1
+        margin-top: 0px
+        margin-bottom: 0px
+    .description
+      width: 0px
+    .price
+      display: inline-block
+      width: 100%
+      margin-left: auto
+      margin-right: auto
+      color: $accent
+      vertical-align: middle
+      h1
+        margin-top: 0px
+        margin-bottom: 0px
+        margin-left: auto
+        margin-right: auto
+    span.pink
+      color: $accent
 
 @media (max-width: 700px)
   .container.products
@@ -52,9 +85,13 @@
     h1
       font-size: 24px
     .price
-      width: 10%
+      width: 100%
+      h1
+        font-size: 35px
     .maintitle
       width: auto
       text-align: center
       h1
         font-size: 35px
+    .description
+      width: 70vw

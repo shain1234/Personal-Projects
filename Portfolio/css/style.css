@@ -169,6 +169,17 @@ body {
   margin-bottom: -5px;
 }
 
+.image-link {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+
+.mfp-title {
+  text-align: center;
+  padding: 6px 0;
+}
+
 .footer {
   text-align: center;
   color: #f89a2c;

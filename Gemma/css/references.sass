@@ -1,11 +1,16 @@
 .container.reference
   overflow:hidden
-  width:100vw
   height:auto
   margin-left: auto
   margin-right: auto
   text-align: center
   color: $secondary
+  vertical-align: bottom
+  background:
+    image:url(../images/gem.svg)
+    repeat: no-repeat
+    position: center bottom
+    size: 100px 100px
 
   .panes
     list-style:none
@@ -26,11 +31,13 @@
     width: 80%
     margin-left: auto
     margin-right: auto
+    h2
+      font-weight: bold
 
-  .pink
-    color: $accent
-    font-size: 40px
-    line-height: 25px
+    .pink
+      color: $accent
+      font-size: 40px
+      line-height: 25px
 
 @keyframes carousel
   0%    { left:0; }
@@ -43,8 +50,8 @@
 
 
 
-@media (max-width: 900px)
-  .carousel
+@media (max-width: 700px)
     .content
       width: 90%
-      font-size: 10px
+      h2
+        font-size: 5vw

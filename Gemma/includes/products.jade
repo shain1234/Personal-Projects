@@ -3,43 +3,54 @@ mixin prod(name, desc, price)
   .product
     .prodname
       h1= name
-    .desciption
+      .price
+        h1= price
+    .description
       h2= desc
-    .price
-      h1= price
+    
         
 
 .container.products
   .maintitle
-    h1 Services
+    h1 Treatments
   .title
     h1 Massage
-  +prod("Back Massage", "Simple but pure bliss, get rid of all the days stress with a wonderful back massage", "£15")
-  +prod("Full Body Swedish", "Desciption", "£30")
-  +prod("Full Body Deep Tissue", "Desciption", "£35")
-  +prod("Inidan Head Massage", "Desciption", "£25")
+  +prod("Swedish Full Body", "A more relaxing massage with essential oils to soothe, combined with long deep techniques to help improve lymphatic drainage. It enables relaxation of the tissue, while increasing the blood flow to the heart. ", "£30")
+  +prod("Deep Tissue Full Body", "A more invigorating massage complete with the use of elbows and knuckles, to work deep rooted tension out of lethargic muscles. This massage is designed to disperse tension, improve circulation and lymphatic drainage. ", "£35")
+  +prod("Indian Head Massage", "This is an energising massage designed with gentle manipulation to ease tensions and eliminate toxins. It includes a firm pressure over the shoulders neck and scalp, complete with pressure points. Finished with a relaxing lymphatic draining facial. This treatment helps to rebalance the mind body and soul. ", "£25")
   .title
     h1 Facials
-  +prod("Miniature Facial", "Desciption", "£12")
-  +prod("1 Hour Special", "Desciption", "£20")
+  +prod("1 Hour Special", "The facial is tailored to your skin type and individual needs using essential oils of your choice. It includes a cleanse and exfoliation massage and mask. This treatment consists of a soothing face, neck  shoulder and scalp massage, enabling lymphatic drainage, reducing puffiness and helping to minimise  blemishes.", "£20")
+  .small
+  +prod("Mini Facial", " ", "£12")
+  .title
+    h1 Tanning
+  +prod("Hand Applied Tan", "Hand applied using the sienna X tan to get an overall even tan, great for special occasions and holidays or just to feel good. The treatment takes around an hour, and the tan should be left on for 8 hours in order to develop properly before being washed off.", "£20")
   .title
     h1 Tinting
-  +prod("Eyelast Tint", "Desciption", "£10")
-  +prod("Brow Tint", "Desciption", "£5")
-  +prod("eyelash & Brow", "Desciption", "£12")
+  .small
+    +prod("Eyelash Tint","", "£10")
+    +prod("Brow Tint","", "£5")
+    +prod("Eyelash & Brow","", "£12")
+    span.pink *test patch must be done 48hr prior to tinting
   .title
     h1 Waxing
-  +prod("Half Leg Wax", "Desciption", "£10")
-  +prod("Full Leg Wax", "Desciption", "£12")
-  +prod("Lip & Chin Wax", "Desciption", "£5")
-  +prod("Eyebrow Wax", "Desciption", "£5")
-  +prod("Underarm Wax", "Desciption", "£7")
-  +prod("Bikini Wax", "Desciption", "£7")
+  .small
+    +prod("Half Leg Wax","", "£12")
+    +prod("Full Leg Wax","", "£20")
+    +prod("Lip & Chin Wax","", "£8")
+    +prod("Eyebrow Wax","", "£8")
+    +prod("Underarm Wax","","£7")
+    +prod("Bikini Wax","", "£7")
   .title
     h1 Nails
-  +prod("manicure", "Desciption", "£15")
-  +prod("Pedicure", "Desciption", "£20")
-  +prod("Pedicure with Gel Polish", "Desciption", "£25")
-  +prod("Removal", "Desciption", "£5")
+  +prod("Manicure", "Concentrating on the well being of the nails and the hands, the full manicure includes a file and shape, cuticle tidy and a relaxing hand and arm massage. Complete with a light buff over the nail ,to smooth and a polish of your choice. ", "£15")
+  +prod("Manicure with Gel Polish", "This is a soak off gel colour which is designed to last for up to three weeks, smudge and chip proof. ", "£20")
+  +prod("Pedicure", "This luxurious treatment includes soaking the feet in warm bubbly water, cut and shape of the nails, cuticle tidy and dead skin removal. A *peppermint scrub is used to make the feet feel energised before a relaxing leg and foot massage, finishing with nail colour  of your choice", "£20")
+  +prod("Pedicure with Gel Polish", "This is a soak off gel colour which is designed to last for up to three weeks, smudge and chip proof. ", "£25")
+  .small
+    +prod("Gel Polish","", "£12")
+    +prod("Removal","", "£5")
+    span.pink *Pedicure pepermint optional
   
   

@@ -1,5 +1,6 @@
 mixin photo(pic)
-  img(src="#{pic}")
+  a(class="with-caption image-link" href="#{pic}")
+    img(src="#{pic}")
 
 #Photography
 .container.photography

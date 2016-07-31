@@ -1,49 +1,42 @@
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $(".nav a").on('click', function(event) {
 
-$('.with-caption').magnificPopup({
-		type: 'image',
-		closeBtnInside: false,
-		mainClass: 'mfp-with-zoom mfp-img-mobile',
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-		image: {
-			verticalFit: true,
-			titleSrc: function(item) {
+      // Store hash
+      var hash = this.hash;
 
-        var caption = item.el.attr('title');
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
 
-        var pinItURL = "http://pinterest.com/pin/create/button/";
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 
-        // Refer to http://developers.pinterest.com/pin_it/
-        pinItURL += '?url=' + 'http://dimsemenov.com/plugins/magnific-popup/';
-        pinItURL += '&media=' + item.el.attr('href');
-        pinItURL += '&description=' + caption;
+$(document).ready(function(){});
 
+function dropdownfun(){
+  $("ul").toggleClass("show");
+};
 
-        return caption + ' &middot; <a class="pin-it" href="'+pinItURL+'" target="_blank"><img src="http://assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>';
-			}
-		},
+var loadImageOnScrollIntoView = function(img) {
+  var imgPos = img.getBoundingClientRect(),
+	  src = img.getAttribute('data-src');
+  window.addEventListener('scroll', function loadImgWhenVisible() {
+    return window.scrollY >= (imgPos.top - window.innerHeight) ? (img.src = src, window.removeEventListener('scroll', loadImgWhenVisible)) : false;
+  });
+};
 
-
-    gallery: {
-      enabled: true
-    },
-
-
-
-    callbacks: {
-      open: function() {
-        this.wrap.on('click.pinhandler', '.pin-it', function(e) {
-
-          // This part of code doesn't work on CodePen, as it blocks window.open
-          // Uncomment it on your production site, it opens a window via JavaScript, instead of new page
-          /*window.open(e.currentTarget.href, "intent", "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + (window.screen ? Math.round(screen.width / 2 - 275) : 50) + ",top=" + 100);
-
-
-          return false;*/
-        });
-      },
-      beforeClose: function() {
-       //this.wrap.off('click.pinhandler');
-      }
-    }
-
-	});
+Array.apply(null, document.querySelectorAll('img')).forEach(function(e) {
+	loadImageOnScrollIntoView(e);
+});

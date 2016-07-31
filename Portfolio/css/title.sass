@@ -1,3 +1,40 @@
+.nav
+  position: fixed
+  width: 770px
+  height: auto
+  background-color: $secondary
+  top: 5px
+  left: 50%
+  font-size: 24px
+  z-index: 500
+  text-align: center
+  margin-left: -385px
+  box-shadow: 0px 0px 0px 1px white
+  span
+    display: none
+
+  ul
+    margin-top: 0px
+    margin-bottom: 0px
+    padding: 0px
+
+    li
+      display: inline-flex
+
+      a
+        text-decoration: none
+        font-size: 25px
+        color: white
+        padding-left: 5px
+        padding-right: 5px
+        line-height: 45px
+        background-color: $secondary
+        transition: 0.5s ease
+        border-bottom: 2px solid $secondary
+      a:hover
+        color: $accent
+        border-bottom: 2px solid
+
 .container.title
   background:
     image: url(../images/Title_bg.jpg)
@@ -7,71 +44,87 @@
   height: 100vh
   width: 100vw
 
-  nav
-    position: fixed
-    top: 0px
-    right: 10px
-    font-size: 24px
-    
-    ul
+  .name
+    text-align: center
+    position: absolute
+    width: 500px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 45px
+    border: 5px solid
+    transition: 0.5s ease
+    h1
       margin-top: 0px
-
-      a
-        text-decoration: none
-        font-size: 25px
-        color: white
-        padding: 5px
-        line-height: 45px
-        background-color: $secondary
-        transition: 0.5s ease
-      a:hover
-        color: $accent
-        border-bottom: 3px solid
-      li
-        display: inline-block
-
-.name
-  text-align: center
-  position: absolute
-  width: 500px
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-  font-size: 45px
-  border: 5px solid
-  transition: 0.5s ease
-  h1
-    margin-top: 0px
-    margin-bottom: 0px
-  .orange
-    color: $accent
-.subtext
-  transition: 0.5s ease
-  text-align: center
-  position: absolute
-  width: 300px
-  top: 50%
-  left: 50%
-  transform: translate(-50%, 50%)
-  font-size: 25px
+      margin-bottom: 0px
+    .orange
+      color: $accent
+  .subtext
+    transition: 0.5s ease
+    text-align: center
+    position: absolute
+    width: 300px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, 50%)
+    font-size: 25px
 
 @media (max-width: 700px)
-  .container.title
-    nav
-      position: absolute
-      width: 100vw
-      text-align: center
-      ul
+  .nav
+    width: auto
+    margin-left: auto
+    position: fixed
+    top: 5px
+    right: 5px
+    background-color: transparent
+    box-shadow: none
+    span
+      display: block
+      width: 40px
+      background-color: white
+      height: 3px
+      margin-bottom: 10px
+      margin-top: 5px
+      box-shadow: 0px 0px 0px 1px black
+      margin-left: auto
+
+    ul
+      display: none
+      transform: translateX(200px)
+      text-align: right
+      transition: 1s
+
+      li
+        display: block
+        
         a
-          font-size: 25px
+          font-size: 18px
           color: white
           padding: 5px
           line-height: 45px
           background-color: $secondary
 
-  .name
-   font-size: 20px
-   width: 220px
-   padding: 10px
-  .subtext
-   font-size: 15px
+    ul.show
+      display: block
+      padding: 0px
+      text-align: right
+      transform: translateX(0px)
+      transition: 1s
+
+      li
+        display: block
+        a
+          font-size: 18px
+          color: white
+          padding: 5px
+          line-height: 45px
+          background-color: $secondary
+
+  .container.title
+
+    .name
+     font-size: 20px
+     width: 220px
+     padding: 10px
+    .subtext
+     font-size: 15px

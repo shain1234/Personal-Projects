@@ -1,18 +1,22 @@
-mixin photo(pic)
-  a(class="with-caption image-link" href="#{pic}")
-    img(src="#{pic}")
+mixin photo(pic, num, big) 
+  a(href="##{num}" class="gal") 
+    img(data-src="#{pic}")
+    a(href="#_" class="lb" id="#{num}") 
+      img(data-src="#{big}")
+  
 
 #Photography
 .container.photography
   h1 PHOTOGRAPHY
+  p click for bigger image
   
   .gallery
-    +photo("./images/gallery/gallery_1.jpg")
-    +photo("./images/gallery/gallery_2.jpg")
-    +photo("./images/gallery/gallery_3.jpg")
-    +photo("./images/gallery/gallery_4.jpg")
-    +photo("./images/gallery/gallery_5.jpg")
-    +photo("./images/gallery/gallery_6.jpg")
+    +photo("./images/gallery/gallery_1.jpg","one","./images/gallery/big/gallery_1.jpg")
+    +photo("./images/gallery/gallery_2.jpg","two","./images/gallery/big/gallery_2.jpg")
+    +photo("./images/gallery/gallery_3.jpg","three","./images/gallery/big/gallery_3.jpg")
+    +photo("./images/gallery/gallery_4.jpg","four","./images/gallery/big/gallery_4.jpg")
+    +photo("./images/gallery/gallery_5.jpg","five","./images/gallery/big/gallery_5.jpg")
+    +photo("./images/gallery/gallery_6.jpg","six","./images/gallery/big/gallery_6.jpg")
     
     
 .footer

@@ -1,22 +1,31 @@
 doctype html
 html(lang="en")
+  
   head
-    title Shain Furby
+    link(rel='shortcut icon', href='./images/gem.png', type='image/x-icon') 
+    title Gem's Home Beauty and Holistic Therapys
+    meta("description", content="Gem-Beauty is a beauty and holistic therapist based in and around Banbury, fair prices and amazing services, direct to your door services.")
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    link( rel="stylesheet" href="css/style.css")
+    link( rel="stylesheet" href="./css/style.css")
 
+      
   body
-
-    include ./includes/title.jade
-    include ./includes/aboutme.jade
-    include ./includes/webdev.jade
-    include ./includes/youtube.jade
-    include ./includes/photography.jade
-
+    //overlay intro
+    include ./includes/home.jade
+    
+    //Header
+    include ./includes/references.jade
+    
+    //pageName
+    include ./includes/products.jade
+    
+    //Member
+    include ./includes/contact.jade
     
 
-//Jquery
-script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js")
-//Java
-script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+
+    //Jquery
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js")
+    //Java
+    script(src="JS/scripts.js")
